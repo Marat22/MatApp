@@ -1,5 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.gms.google-services") // Добавьте эту строку сюда
+//    id("com.google.gms.google-services") version "4.4.2" apply false
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -40,4 +43,14 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    // Firebase
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
+    // TODO: Add the dependencies for any other Firebase products you want to use
+    // See https://firebase.google.com/docs/android/setup#available-libraries
+    // For example, add the dependencies for Firebase Authentication and Cloud Firestore
+    implementation(libs.firebase.auth)
+    implementation(libs.google.firebase.firestore)
+    implementation(libs.google.firebase.database)
 }

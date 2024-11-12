@@ -1,9 +1,7 @@
 package yasa.step.matapp;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 
@@ -19,7 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button buttonToActivity3 =(Button)findViewById(R.id.button2);
+        Button buttonToActivity3 = (Button) findViewById(R.id.button2);
         buttonToActivity3.setOnClickListener(this);
     }
 
